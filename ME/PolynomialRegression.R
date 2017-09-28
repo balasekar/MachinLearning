@@ -18,6 +18,7 @@ lin_reg = lm(formula = Consumption ~ Temp + Bedrooms,
 summary(lin_reg)
 
 
+
 # Predicting the Test set results
 y_pred = predict(lin_reg, newdata = test_set)
 
@@ -44,6 +45,8 @@ poly_reg = lm(formula = Consumption ~  Temp + Temp2 + Temp3 ,
 
 multi_poly_reg = lm(formula = Consumption ~ polym(Temp, Bedrooms, degree=2, raw=TRUE),
                            data = dataset) 
+
+summary(multi_poly_reg)
 
 # Visualising the Polynomial Regression results
 # install.packages('ggplot2')
